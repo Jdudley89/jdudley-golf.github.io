@@ -81,23 +81,33 @@
         }
 
         /* --- Hero Section --- */
+        /* Updated with Image Background and Text Overlay */
         header {
             text-align: center;
-            padding: 6rem 1rem;
-            background: linear-gradient(135deg, #01016e 0%, #01016e 100%);
+            padding: 10rem 1rem; /* Increased padding for more image visibility */
+            /* Background image settings */
+            background-image: linear-gradient(rgba(0, 0, 110, 0.4), rgba(0, 0, 110, 0.6)), url('FB_IMG_1780960954121.jpg');
+            background-size: cover;
+            background-position: center 25%; /* Adjusts vertical focus of the image */
+            background-repeat: no-repeat;
             color: var(--accent-color);
             border-bottom: 4px solid var(--secondary-color);
+            position: relative;
         }
 
         header h1 {
-            font-size: 3.2rem;
+            font-size: 3.8rem; /* Slightly larger text */
             margin-bottom: 0.5rem;
             font-weight: 800;
+            /* Added text shadow for readability */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-style: italic;
+            /* Added text shadow for readability */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
 
         /* --- Sections --- */
@@ -197,6 +207,8 @@
 
         @media (max-width: 600px) {
             .skills-list { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
         }
     </style>
 </head>
