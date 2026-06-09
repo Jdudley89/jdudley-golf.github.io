@@ -3,200 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PGA Class 'A' Professional and developer specializing in golf operations, member development, and algorithmic trading solutions.">
+    <meta name="description" content="Jason Dudley, PGA Class 'A' Professional specializing in golf operations, member development, and club management.">
+    <meta name="keywords" content="PGA Professional, Golf Operations, Jason Dudley, Golf Management, Teaching Professional">
     <title>Jason Dudley, PGA | Club & Teaching Professional</title>
     <style>
-        /* --- PGA Inspired Color Scheme: Navy Blue, Gold, and White --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Georgia, serif;
-            scroll-behavior: smooth;
-        }
-
         :root {
             --bg-color: #f8fafc;
             --text-color: #1e293b;
-            --primary-color: #01016e; /* Navy Blue */
-            --secondary-color: #d4af37; /* PGA Gold */
-            --accent-color: #ffffff; 
+            --primary-color: #01016e;
+            --secondary-color: #d4af37;
+            --accent-color: #ffffff;
             --card-bg: #ffffff;
             --muted-text: #475569;
         }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
 
-        .container {
-            width: 85%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
+        .container { width: 85%; max-width: 1000px; margin: 0 auto; padding: 2rem 0; }
 
-        /* --- Navigation --- */
-        nav {
-            background: var(--primary-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 4px solid var(--secondary-color);
-        }
+        nav { background: var(--primary-color); position: sticky; top: 0; z-index: 100; border-bottom: 4px solid var(--secondary-color); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--accent-color); font-weight: 600; font-size: 0.9rem; }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        header { text-align: center; padding: 5rem 1rem; background: var(--primary-color); color: var(--accent-color); border-bottom: 4px solid var(--secondary-color); }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero-sub { font-style: italic; font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .philosophy { max-width: 700px; margin: 0 auto; font-size: 1rem; opacity: 0.9; }
 
-        .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            letter-spacing: 1px;
-        }
+        section { padding: 4rem 0; border-bottom: 1px solid #e2e8f0; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color); text-align: center; }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
+        .timeline-item { background: var(--card-bg); padding: 2rem; border-radius: 8px; border-left: 5px solid var(--primary-color); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 1.5rem; transition: transform 0.2s; }
+        .timeline-item:hover { transform: translateY(-3px); }
+        .job-title { font-size: 1.3rem; font-weight: bold; color: var(--primary-color); }
+        .company-date { color: var(--secondary-color); font-weight: 600; margin-bottom: 1rem; }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .info-card { background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* --- Hero Section --- */
-        header {
-            text-align: center;
-            padding: 6rem 1rem;
-            background: linear-gradient(135deg, #01016e 0%, #01016e 100%);
-            color: var(--accent-color);
-            border-bottom: 4px solid var(--secondary-color);
-        }
-
-        header h1 {
-            font-size: 3.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            font-style: italic;
-        }
-
-        /* --- Sections --- */
-        section {
-            padding: 4.5rem 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 2.5rem;
-            color: var(--primary-color);
-            text-align: center;
-            position: relative;
-        }
-
-        section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary-color);
-            margin: 0.5rem auto 0 auto;
-        }
-
-        /* --- Layout Cards --- */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .timeline-item {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 6px;
-            border-left: 5px solid var(--primary-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .job-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .company-date {
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-item ul {
-            padding-left: 1.2rem;
-        }
-
-        .timeline-item li {
-            margin-bottom: 0.5rem;
-            color: var(--muted-text);
-        }
-
-        .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .skills-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem;
-        }
-
-        .skills-list li::before {
-            content: "✓";
-            color: var(--secondary-color);
-            margin-right: 0.5rem;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            background: var(--primary-color);
-            color: var(--accent-color);
-        }
-
-        @media (max-width: 600px) {
-            .skills-list { grid-template-columns: 1fr; }
+        @media print {
+            nav { display: none; }
+            body { background: white; color: black; }
+            .timeline-item { border: 1px solid #ccc; break-inside: avoid; }
         }
     </style>
 </head>
@@ -207,8 +58,7 @@
             <div class="logo">Jason Dudley, PGA</div>
             <ul class="nav-links">
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Pillars</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -216,112 +66,53 @@
 
     <header>
         <h1>Jason Dudley, PGA</h1>
-        <p>PGA Class 'A' Professional | 1st Assistant Professional</p>
+        <p class="hero-sub">Class 'A' Professional | Club & Teaching Operations</p>
+        <p class="philosophy">Dedicated to operational excellence, fostering exceptional member experiences, and driving the growth of the game through structured management and high-touch service.</p>
     </header>
 
     <div class="container">
-        
         <section id="experience">
             <h2>Career Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Seven Lakes Golf & Country Club</div>
-                    <div class="company-date">2025 – Current</div>
-                    <ul>
-                        <li>Manage tee times for members.</li>
-                        <li>Facilitate lessons for members.</li>
-                        <li>Assist with all club groups, tournaments and outings.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Woodhaven CC</div>
-                    <div class="company-date">2024 – 2025</div>
-                    <ul>
-                        <li>Manage tee times for members and public.</li>
-                        <li>Facilitate lessons for members and public.</li>
-                        <li>Assist with all club groups, tournaments and outings.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Rancho La Quinta Country Club</div>
-                    <div class="company-date">2022 – 2024</div>
-                    <ul>
-                        <li>Management of golf operations staff including payroll, scheduling, receiving, staffing, and training.</li>
-                        <li>Facilitate club tournaments, player development, and member/guest relationships.</li>
-                        <li>Merchandising, equipment sales, and club promotion.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Mission Hills Country Club</div>
-                    <div class="company-date">2021 – 2022</div>
-                    <ul>
-                        <li>Management of golf operations staff.</li>
-                        <li>Facilitated tournaments, LPGA events, and charity events.</li>
-                        <li>Player development, member/guest relationships, and golf clinics.</li>
-                        <li>Improved hard good sales, hard good orders, and merchandising.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Silver Rock Resort</div>
-                    <div class="company-date">2018 – 2021</div>
-                    <ul>
-                        <li>Management of outside services, starters, and player assistants.</li>
-                        <li>Facilitated groups tournaments, SCPGA events, and resort promotional events.</li>
-                        <li>Provided excellent guest experience, lessons, and merchandise sales.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">1st Assistant | Cross Creek Golf Club</div>
-                    <div class="company-date">2015 – 2018</div>
-                    <ul>
-                        <li>Managed outside service staff, ensured tee sheet consistency, and merchandising.</li>
-                        <li>Player development for members and the public.</li>
-                        <li>Facilitated all member tournaments and public tournaments.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="professional-details" class="grid-layout">
-            <div id="education" class="info-card">
-                <h2>Education</h2>
+            <div class="timeline-item">
+                <div class="job-title">PGA 1st Assistant | Seven Lakes Golf & Country Club</div>
+                <div class="company-date">2025 – Current</div>
                 <ul>
-                    <li><strong>B.S. Business Administration Management</strong> <br> Western Governors University</li>
-                    <li><strong>Associates Golf Management</strong> <br> Professional Golfers Career College</li>
-                    <li><strong>Associates Criminal Science</strong> <br> Gateway Technical College</li>
-                    <li><strong>PGA Member</strong> <br> PGA of America</li>
+                    <li>Overseeing comprehensive golf operations and member-facing programming.</li>
+                    <li>Managing daily tee sheet logistics and high-level member relations.</li>
                 </ul>
             </div>
-            <div id="skills" class="info-card">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>PGA Member</li>
-                    <li>Budget Management</li>
-                    <li>Staff Management</li>
-                    <li>Tournaments</li>
-                    <li>Golf Genius</li>
-                    <li>Player Development</li>
-                    <li>Merchandising</li>
-                    <li>Software Proficiency</li>
-                   
+            <!-- Additional items can be added here -->
+        </section>
+
+        <section id="skills" class="grid-layout">
+            <div class="info-card">
+                <h2>Operational Pillars</h2>
+                <p><strong>Member Engagement:</strong> Delivering personalized experiences that drive club retention and value.</p><br>
+                <p><strong>Tournament Leadership:</strong> Orchestrating seamless events, from member outings to professional-level charity tournaments.</p><br>
+                <p><strong>Staff Development:</strong> Mentoring outside services and shop personnel to uphold elite service standards.</p>
+            </div>
+            <div class="info-card">
+                <h2>Certifications & Education</h2>
+                <ul>
+                    <li><strong>PGA Member</strong> – PGA of America</li>
+                    <li><strong>B.S. Business Administration</strong> – Western Governors University</li>
+                    <li><strong>A.S. Golf Management</strong> – PGCC</li>
                 </ul>
             </div>
         </section>
 
-        <section id="contact" style="border: none;">
-            <div class="info-card" style="text-align: center; max-width: 500px; margin: 0 auto;">
-                <h2>Contact Information</h2>
-                <p><strong>Jason Dudley</strong></p>
-                <p>Phone: 262-331-3969</p>
-                <p>Email: <a href="mailto:Jasondudley89@gmail.com">Jasondudley89@gmail.com</a></p>
-            </div>
+        <section id="contact" style="text-align: center; border: none;">
+            <h2>Contact Information</h2>
+            <p><strong>Jason Dudley</strong></p>
+            <p>Phone: 262-331-3969</p>
+            <p>Email: <a href="mailto:Jasondudley89@gmail.com">Jasondudley89@gmail.com</a></p>
         </section>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 Jason Dudley. Member, PGA of America.</p>
+        <div style="text-align: center; padding: 2rem; background: var(--primary-color); color: var(--accent-color);">
+            <p>&copy; 2026 Jason Dudley. PGA Member.</p>
+        </div>
     </footer>
-
 </body>
 </html>
