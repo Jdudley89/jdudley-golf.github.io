@@ -6,7 +6,6 @@
     <meta name="description" content="PGA Class 'A' Professional and developer specializing in golf operations, member development, and algorithmic trading solutions.">
     <title>Jason Dudley, PGA | Club & Teaching Professional</title>
     <style>
-        /* --- PGA Inspired Color Scheme: Navy Blue, Gold, and White --- */
         * {
             margin: 0;
             padding: 0;
@@ -18,8 +17,8 @@
         :root {
             --bg-color: #f8fafc;
             --text-color: #1e293b;
-            --primary-color: #01016e; /* Navy Blue */
-            --secondary-color: #d4af37; /* PGA Gold */
+            --primary-color: #01016e;
+            --secondary-color: #d4af37;
             --accent-color: #ffffff; 
             --card-bg: #ffffff;
             --muted-text: #475569;
@@ -80,11 +79,15 @@
             color: var(--secondary-color);
         }
 
-        /* --- Hero Section --- */
+        /* --- Updated Hero Section with Image --- */
         header {
             text-align: center;
-            padding: 6rem 1rem;
-            background: linear-gradient(135deg, #01016e 0%, #01016e 100%);
+            padding: 8rem 1rem;
+            /* Overlay gradient keeps text readable over the photo */
+            background: linear-gradient(rgba(1, 1, 110, 0.6), rgba(1, 1, 110, 0.6)), 
+                        url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
             color: var(--accent-color);
             border-bottom: 4px solid var(--secondary-color);
         }
@@ -93,11 +96,13 @@
             font-size: 3.2rem;
             margin-bottom: 0.5rem;
             font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         header p {
             font-size: 1.3rem;
             font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         /* --- Sections --- */
@@ -123,12 +128,7 @@
             margin: 0.5rem auto 0 auto;
         }
 
-        /* --- Layout Cards --- */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+        .timeline { display: flex; flex-direction: column; gap: 2rem; }
 
         .timeline-item {
             background: var(--card-bg);
@@ -138,66 +138,20 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .job-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
+        .job-title { font-size: 1.4rem; font-weight: bold; color: var(--primary-color); }
+        .company-date { color: var(--secondary-color); font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem; }
+        .timeline-item ul { padding-left: 1.2rem; }
+        .timeline-item li { margin-bottom: 0.5rem; color: var(--muted-text); }
 
-        .company-date {
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .info-card { background: var(--card-bg); padding: 2rem; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
 
-        .timeline-item ul {
-            padding-left: 1.2rem;
-        }
+        .skills-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .skills-list li::before { content: "✓"; color: var(--secondary-color); margin-right: 0.5rem; }
 
-        .timeline-item li {
-            margin-bottom: 0.5rem;
-            color: var(--muted-text);
-        }
+        footer { text-align: center; padding: 3rem 0; background: var(--primary-color); color: var(--accent-color); }
 
-        .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .skills-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem;
-        }
-
-        .skills-list li::before {
-            content: "✓";
-            color: var(--secondary-color);
-            margin-right: 0.5rem;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            background: var(--primary-color);
-            color: var(--accent-color);
-        }
-
-        @media (max-width: 600px) {
-            .skills-list { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 600px) { .skills-list { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -220,66 +174,10 @@
     </header>
 
     <div class="container">
-        
         <section id="experience">
             <h2>Career Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Seven Lakes Golf & Country Club</div>
-                    <div class="company-date">2025 – Current</div>
-                    <ul>
-                        <li>Manage tee times for members.</li>
-                        <li>Facilitate lessons for members.</li>
-                        <li>Assist with all club groups, tournaments and outings.</li>
-                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Woodhaven CC</div>
-                    <div class="company-date">2024 – 2025</div>
-                    <ul>
-                        <li>Manage tee times for members and public.</li>
-                        <li>Facilitate lessons for members and public.</li>
-                        <li>Assist with all club groups, tournaments and outings.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Rancho La Quinta Country Club</div>
-                    <div class="company-date">2022 – 2024</div>
-                    <ul>
-                        <li>Management of golf operations staff including payroll, scheduling, receiving, staffing, and training.</li>
-                        <li>Facilitate club tournaments, player development, and member/guest relationships.</li>
-                        <li>Merchandising, equipment sales, and club promotion.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Mission Hills Country Club</div>
-                    <div class="company-date">2021 – 2022</div>
-                    <ul>
-                        <li>Management of golf operations staff.</li>
-                        <li>Facilitated tournaments, LPGA events, and charity events.</li>
-                        <li>Player development, member/guest relationships, and golf clinics.</li>
-                        <li>Improved hard good sales, hard good orders, and merchandising.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">PGA 1st Assistant | Silver Rock Resort</div>
-                    <div class="company-date">2018 – 2021</div>
-                    <ul>
-                        <li>Management of outside services, starters, and player assistants.</li>
-                        <li>Facilitated groups tournaments, SCPGA events, and resort promotional events.</li>
-                        <li>Provided excellent guest experience, lessons, and merchandise sales.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="job-title">1st Assistant | Cross Creek Golf Club</div>
-                    <div class="company-date">2015 – 2018</div>
-                    <ul>
-                        <li>Managed outside service staff, ensured tee sheet consistency, and merchandising.</li>
-                        <li>Player development for members and the public.</li>
-                        <li>Facilitated all member tournaments and public tournaments.</li>
-                    </ul>
-                </div>
-            </div>
         </section>
 
         <section id="professional-details" class="grid-layout">
@@ -303,7 +201,6 @@
                     <li>Player Development</li>
                     <li>Merchandising</li>
                     <li>Software Proficiency</li>
-                   
                 </ul>
             </div>
         </section>
@@ -316,7 +213,6 @@
                 <p>Email: <a href="mailto:Jasondudley89@gmail.com">Jasondudley89@gmail.com</a></p>
             </div>
         </section>
-
     </div>
 
     <footer>
